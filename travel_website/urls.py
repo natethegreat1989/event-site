@@ -20,7 +20,11 @@ from django.views.generic import *
 class Index(TemplateView):
     template_name = "index.html"
 
+class ChrisIndex(TemplateView):
+    template_name = "chrisindex.html"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
+    path('chrisindex/', ChrisIndex.as_view(), name='chrisindex'),
 ]
