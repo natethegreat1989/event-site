@@ -98,17 +98,23 @@
      <!-- FEATURE -->
      <section id="feature" data-stellar-background-ratio="0.5">
           <div class="container">
+
+
+                    {% for item in object_list %}
+                                                  
+
+
                <div class="row">
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h1>What you get</h1>
+                              <h1>{{item.title}}</h1>
                          </div>
                     </div>
 
                     <div class="col-md-6 col-sm-6">
                          <ul class="nav nav-tabs" role="tablist">
-                              <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Responsive</a></li>
+                              <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">{{item.date}}</a></li>
 
                               <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Mobile</a></li>
 
@@ -164,6 +170,7 @@
                     </div>
 
                </div>
+               {% endfor %}
           </div>
      </section>
 
